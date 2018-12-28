@@ -11,6 +11,12 @@ Page({
   },
 
   onLoad: function() {
+    console.log(123213213);
+    wx.reLaunch({
+      url: '../home/home',
+    })
+    return
+    
     if (!wx.cloud) {
       wx.redirectTo({
         url: '../chooseLib/chooseLib',
