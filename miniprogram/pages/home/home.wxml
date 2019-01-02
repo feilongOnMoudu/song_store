@@ -1,14 +1,22 @@
 <!--miniprogram/pages/home/home.wxml-->
 <view>
-  <swiper class="swiper" 
-    indicator-dots="{{true}}"
-    autoplay="{{true}}"
-    >
-    <block wx:for="{{imageUrl}}" wx:key="*this">
+  <swiper class="swiper" indicator-dots="{{true}}" autoplay="{{true}}">
+    <block wx:for="{{bannerData}}" wx:key="*this">
       <swiper-item>
         <image src="{{item}}" class="swiper-image" />
       </swiper-item>
     </block>
-    
   </swiper>
+  <view class="grids">
+    <block wx:for='{{gridData}}' wx:key='id'>
+      <view class="grids-cell" bindtap="gridClick" data-item-type="{{index}}">
+        <!-- <navigator url="{{item.linkUrl}}"> -->
+          <view class="grids-cell-icon">
+            <image src="{{item.imagUrl}}" mode="scaleToFill" />
+          </view>
+          <text class="grids-cell-label">{{item.title}}</text>
+        <!-- </navigator> -->
+      </view>
+    </block>
+  </view>
 </view>

@@ -11,6 +11,7 @@
 	"appid": "wx8d3af63e8dea4766",
 	"projectname": "song_store",
 	"libVersion": "2.2.5",
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,

@@ -1,4 +1,5 @@
 /* miniprogram/pages/home/home.wxss */
+
 page {
   background: #f6f6f6;
   display: flex;
@@ -9,11 +10,91 @@ page {
 .swiper {
   width: 100%;
   height: 200px;
-
 }
 
 .swiper-image {
   background-color: cyan;
   width: 100%;
   height: 100%;
+}
+
+.row-class {
+  background: #fff;
+}
+
+.col-class {
+  height: 32px;
+  line-height: 32px;
+  color: #fff;
+  text-align: center;
+  background: #2d8cf0;
+  font-size: 12px;
+}
+
+.col-class.light {
+  background: #5cadff;
+}
+
+.grid-class {
+  background: #fff;
+}
+
+.table {
+  display: grid;
+  width: 100%;
+  overflow-x: hidden; /* 设置列、行大小 fr单位是等分分配列空间*/
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200rpx 200rpx; /* 有多余数据时，自动添加新行时默认行高为：200rpx */
+  grid-auto-rows: 200rpx; /* 设置网格线大小 */
+  grid-gap: 10rpx;
+}
+
+.table-th {
+  font-weight: bold;
+  background-color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-td {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grids {
+  position: relative;
+  overflow: hidden;
+  padding: 10px;
+  text-align: center;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.grids-cell {
+  position: relative;
+  float: left;
+  width: 30%;
+  margin: 5px;
+}
+
+.grids-cell-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.grids-cell-icon image {
+  width: 50px;
+  height: 50px;
+}
+
+.grids-cell-label {
+  display: block;
+  font-size: 13px;
+  text-align: center;
 }

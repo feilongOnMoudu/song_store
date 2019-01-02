@@ -8,7 +8,8 @@
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib",
     "pages/home/home",
-    "pages/my/myInfo"
+    "pages/my/myInfo",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundColor": "#00B2EE",
@@ -19,17 +20,21 @@
   },
   "tabBar": {
     "color": "#7A7E83",
-    "selectedColor": "#3cc51f",
+    "selectedColor": "#384B9F",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/home/home",
+        "iconPath": "images/icon_home_normal.png",
+        "selectedIconPath": "images/icon_home_select.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/my/myInfo",
-        "text": "日志"
+        "iconPath": "images/icon_my_normal.png",
+        "selectedIconPath": "images/icon_my_select.png",
+        "text": "我的"
       }
     ]
   }

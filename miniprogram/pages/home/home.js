@@ -1,22 +1,32 @@
 // miniprogram/pages/home/home.js
+
+var Datas = require('../../util/staticData.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imageUrl:[
-      'https://www.cifm.com/upload/201812/W020181227618777179933.jpg',
-      'https://www.cifm.com/upload/201812/W020181226539352827468.jpg',
-      'https://www.cifm.com/upload/201812/W020181225467339979384.jpg'
-    ]
+    bannerData: Datas.bannerData,
+    gridData: Datas.gridData,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(Datas);
     console.log(2222);
+
+    
+  },
+
+  gridClick: function (e) {
+    console.log(this.data);
+    wx.navigateTo({
+      url: this.data.gridData[e.currentTarget.dataset.itemType].linkUrl,
+    })
   },
 
   /**
